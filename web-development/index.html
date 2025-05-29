@@ -127,6 +127,28 @@
   <script src="_next/static/chunks/pages/index-7e6175b35ce5c7b6.js" defer=""></script>
   <script src="_next/static/59JQr9ua1TPvLaI6kcGdv/_buildManifest.js" defer=""></script>
   <script src="_next/static/59JQr9ua1TPvLaI6kcGdv/_ssgManifest.js" defer=""></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all navigation links
+      const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+      
+      // Add click event listener to each link
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          // Find the offcanvas element
+          const offcanvasElement = document.getElementById('navbarNav');
+          // Check if Bootstrap instance exists and close it
+          if (offcanvasElement && bootstrap && bootstrap.Offcanvas) {
+            const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
+            if (offcanvasInstance) {
+              offcanvasInstance.hide();
+            }
+          }
+        });
+      });
+    });
+  </script>
 
   <style>
     /*--------------------------------------------------------------
@@ -419,8 +441,11 @@
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          
-          
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about-us-sec" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#section-testimonial" class="nav-link">Testimonials</a></li>
                 <li class="nav-item contact-new-item"><a href="#contactContainer"
                     class="btn btn-primary shadow-primary btn-md">Contact Us</a></li>
               </ul>
@@ -430,7 +455,7 @@
               class="navbar-toggler-icon"></span></button>
         </div>
       </header>
-      <section class="home-banner">
+      <section id="home" class="home-banner">
         <div class="overlay"></div>
         <div class="banner-center">
           <div class="container">
@@ -511,7 +536,7 @@
           </div>
         </section>
       </div>
-      <section class="about-us-sec my-5">
+      <section id="about-us-sec" class="about-us-sec my-5">
         <div class="container">
           <div class="row">
             <div class="col-lg-6 col-md-12 my-5">
@@ -832,7 +857,7 @@
         </div>
       </section>
      
-<section class="section-testimonial my-5">
+<section id="section-testimonial" class="section-testimonial my-5">
   <div class="title">
     <h2 class="h1"><span>/</span>Testimonials</h2>
     <h3 class="text-dark pb-1 mb-2">Our customer experiences are built on trust.</h3>
