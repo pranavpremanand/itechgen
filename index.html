@@ -417,6 +417,74 @@
             width: 80%;
         }
     }
+    /** blog style start*/
+    .blogs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .blogs-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .blogs-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .blogs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .blogs-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .blog-card {
+            display: block;
+            background: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .blog-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 12rem;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 1rem;
+        }
+        
+        .blog-heading {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-description {
+            color: #4b5563;
+            line-height: 1.5;
+        }
+
    
        </style>
 
@@ -1130,6 +1198,43 @@
         </div>
         <div class="Toastify"></div>
       </div>
+
+     <div class="blogs-container">
+        <h1 class="h1 mb-4 text-center">Blogs</h1>
+        
+        <div class="blogs-grid">
+            <!-- Blog Card 1 -->
+            <a href="https://itechgenai.blogspot.com/2025/05/itechgenai-Explore%20the%20Future%20with%20AIInsights%20Innovations%20and%20Trends%20.html" 
+               class="blog-card">
+                <img src="./blog-1.png" alt="blogimageone" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-heading">Explore the Future with AI: Insights, Innovations, and Trends at itechgenai</h2>
+                    <p class="blog-description">We believe Artificial Intelligence is more than a tool—it's the foundation of a smarter, more innovative world. From revolutionizing software development to reimagining creative processes, AI is transforming industries at lightning speed. In this article, we explore the top trends, innovations, and use cases driving the future of AI-and how ITECHGENAI is helping shape that future.</p>
+                </div>
+            </a>
+
+            <!-- Blog Card 2 -->
+            <a href="https://itechgenai.blogspot.com/2025/05/ai-is-transforming-game.html" 
+               class="blog-card">
+                <img src="./blog-2.png" alt="blogimageone" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-heading">AI is Transforming Game Development:review by itechgenai</h2>
+                    <p class="blog-description">Artificial Intelligence (AI) is revolutionizing the game development industry by enhancing creativity, optimizing workflows, and delivering more immersive player experiences. Whether it's coding, design, testing, or live operations, AI is helping studios of all sizes build better games faster and smarter.</p>
+                </div>
+            </a>
+
+            <!-- Blog Card 3 -->
+            <a href="https://itechgenai.blogspot.com/2025/05/itechgenai-AI%20Powered%20Mobile%20Apps%20The%20Future%20in%20Your%20Pocket.html" 
+               class="blog-card">
+                <img src="./blog-3.jpg" alt="blogimageone" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-heading">AI-Powered Mobile Apps: The Future in Your Pocket</h2>
+                    <p class="blog-description">Mobile apps have revolutionized how we interact with the world. Now, Artificial Intelligence (AI) is poised to transform them again. This post explores the exciting evolution of AI-powered mobile apps, their current capabilities, and what the future holds, especially concerning Generative AI and ItechgenAI's unique role.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
     </div>
     <footer class="footer dark-mode bg-dark pt-5 pb-0 footer-overlay mt-3">
       <div class="container pt-lg-4">
