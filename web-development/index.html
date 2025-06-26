@@ -108,7 +108,7 @@
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11098859183"></script>
 
   <script
-    type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"ITech Gen | Web Development Company in India, USA","url":"","logo":"img/logo.png","image":"img/logo.png","description":"We are best web development companies in USA & India for Startups &amp; Enterprise, provides high-quality android, ios &amp; ios development services.","telephone":"+919346818755","pricerange":"Call US: +919346818755 | Mail US: Veggelatharun195@gmail.com","geo":{"@type":"GeoCoordinates","latitude":12.938280826668452,"longitude":77.69956251534151},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","bestRating":"5","ratingCount":"1550"},"address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressRegion":"IN","streetAddress":"4th Floor, Vaswani Presidio, Panathur Main Rd, New Kaverappa Layout, Kaverappa Layout, Kadubeesanahalli","postalCode":"560103"},"openingHours":["Mo-Fri 10:00AM-08:00PM"]}</script>
+    type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"ITech Gen | Web Development Company in India, USA","url":"","logo":"img/logo.png","image":"img/logo.png","description":"We are best web development companies in USA & India for Startups &amp; Enterprise, provides high-quality android, ios &amp; ios development services.","telephone":"+919346818755","pricerange":"Call US: +919346818755 | Mail US: veggelatharun195@gmail.com","geo":{"@type":"GeoCoordinates","latitude":12.938280826668452,"longitude":77.69956251534151},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","bestRating":"5","ratingCount":"1550"},"address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressRegion":"IN","streetAddress":"4th Floor, Vaswani Presidio, Panathur Main Rd, New Kaverappa Layout, Kaverappa Layout, Kadubeesanahalli","postalCode":"560103"},"openingHours":["Mo-Fri 10:00AM-08:00PM"]}</script>
   <script
     type="application/ld+json">{"@context":"https://schema.org","@type":"iosSite","name":"ITech Gen | Web Development Company in India & USA","url":"","sameAs":["https://www.facebook.com/neetable/","https://twitter.com/myneetable","https://in.linkedin.com/company/neetable","https://www.instagram.com/neetable/","https://in.pinterest.com/neetable/"]}</script>
 
@@ -1187,23 +1187,22 @@
             <div class="row pt-4 pb-4 mb-lg-4">
               <h2 class="text-white home-contact-heading">Let&#x27;s Talk.</h2>
               <p>Send us your project requirements and we&#x27;ll get back to you within 24 hrs.</p>
-              <form class="col-md-12 col-lg-12 needs-validation js-validate gx-5" novalidate="">
+              <form class="col-md-12 col-lg-12 needs-validation js-validate gx-5" id="contactForm" onsubmit="sendEmail(); return false;" novalidate="">
                 <div class="row mt-3">
                   <div class="col-sm-6 mb-4"><input type="text" id="name" class="form-control home-form-control"
-                      name="name" placeholder="John Smith" value="" /></div>
+                      name="name" placeholder="John Smith" value="" required /></div>
                   <div class="col-sm-6 mb-4"><input type="email" id="email" class="form-control home-form-control"
-                      name="email" placeholder="Veggelatharun195@gmail.com" value="" /></div>
+                      name="email" placeholder="xyz@example.com" value="" required /></div>
                   <div class="col-sm-6 mb-4 mt-3"><input type="tel" id="phone" class="form-control home-form-control"
                       data-format="custom" data-delimiter="-" data-blocks="2 3 4" data-numeral="9"
-                      placeholder="Contact Number" name="phone" value="" /></div>
+                      placeholder="Contact Number" name="phone" value="" required /></div>
               
                   <div class="col-12 mb-4"><textarea id="message" class="form-control home-form-control form-control-lg"
-                      rows="2" placeholder="Please Share Your Business Requirements" name="message"></textarea></div>
+                      rows="2" placeholder="Please Share Your Business Requirements" name="message" required></textarea></div>
                 </div>
                 <div class="d-flex justify-content-between">
                   <p class="text-white d-none d-md-block">By Submitting this form I confirm that I have read and accept
                     the Privacy Policy</p><button 
-                    onclick="sendEmail()"
                     type="submit"
                     class="btn btn-primary btn-lg shadow-primary">Submit</button>
                 </div>
@@ -1237,8 +1236,8 @@
                   class="footer-nav-link d-inline-block fs-md p-0">+919346818755</a></span></div>
           </div>
           <div class="col-xl-2 col-lg-4 col-md-4">
-            <div class="text-light"> Business Enquiry:</div><a href="mailto:Veggelatharun195@gmail.com"
-              class="fw-medium text-decoration-none"> Veggelatharun195@gmail.com</a>
+            <div class="text-light"> Business Enquiry:</div><a href="mailto:veggelatharun195@gmail.com"
+              class="fw-medium text-decoration-none"> veggelatharun195@gmail.com</a>
            
           </div>
         </div>
@@ -1271,7 +1270,7 @@
 
     <div class="modal fade fixed-modal-top" id="modalId" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg" role="document">
-        <form class=" needs-validation js-validate" novalidate="">
+        <form class="needs-validation js-validate" id="modalForm" onsubmit="sendModalEmail(); return false;" novalidate="">
           <div class="modal-content modal-content-radius">
             <div class="modal-headers justify-content-end">
               <div class="d-lg-none">
@@ -1319,16 +1318,18 @@
                 <section class="clientQueryForm">
                   <div class="py-3">
                     <div class="row">
-                      <div class="col-sm-12 mb-4"><input type="text" id="name" class="form-control" name="name"
-                          placeholder="Name*" value="" /></div>
-                      <div class="col-sm-12 mb-4"><input type="email" id="email" class="form-control" name="email"
-                          placeholder="Email*" value="" /></div>
-                      <div class="col-sm-12 mb-4"><input type="tel" id="phone" class="form-control" data-format="custom"
+                      <div class="col-sm-12 mb-4"><input type="text" id="modal-name" class="form-control" name="name"
+                          placeholder="Name*" value="" required /></div>
+                      <div class="col-sm-12 mb-4"><input type="email" id="modal-email" class="form-control" name="email"
+                          placeholder="Email*" value="" required /></div>
+                      <div class="col-sm-12 mb-4"><input type="tel" id="modal-phone" class="form-control" data-format="custom"
                           data-delimiter="-" data-blocks="2 3 4" data-numeral="9" placeholder="Contact Number*"
-                          name="phone" value="" /></div>
-                      <div class="col-12 mb-4"><textarea id="message" class="form-control form-control-lg" rows="2"
-                          placeholder="Please Share Your Business Requirements" name="message"></textarea></div>
-                    </div><button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                          name="phone" value="" required /></div>
+                      <div class="col-12 mb-4"><textarea id="modal-message" class="form-control form-control-lg" rows="2"
+                          placeholder="Please Share Your Business Requirements" name="message" required></textarea></div>
+                    </div>
+                    <div id="modal-form-status"></div>
+                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
                   </div>
                 </section>
               </div>
@@ -1344,29 +1345,56 @@
   
 	<script type="text/javascript">
 		function sendEmail() {
+			event.preventDefault(); // Prevent form from submitting normally
+			
 			// Get input values
 			var name = document.getElementById("name").value;
 			var email = document.getElementById("email").value;
 			var message = document.getElementById("message").value;
 			var phone = document.getElementById("phone").value;
-
+			var submitButton = document.querySelector('button[type="submit"]');
+			var formContainer = document.getElementById("contactContainer");
+			
+			// Create loading indicator
+			var loadingIndicator = document.createElement("div");
+			loadingIndicator.id = "loadingIndicator";
+			loadingIndicator.innerHTML = '<div class="spinner-border text-light" role="status"><span class="visually-hidden">Loading...</span></div><span class="ms-2 text-light">Sending...</span>';
+			loadingIndicator.style.display = "flex";
+			loadingIndicator.style.alignItems = "center";
+			loadingIndicator.style.justifyContent = "center";
+			loadingIndicator.style.marginTop = "15px";
+			
+			// Create success message
+			var successMessage = document.createElement("div");
+			successMessage.id = "successMessage";
+			successMessage.className = "alert alert-success mt-3";
+			successMessage.innerHTML = "Your message has been sent successfully! We'll get back to you soon.";
+			successMessage.style.display = "none";
+			
 			// Check if any required field is empty
 			if (!name || !email || !message || !phone) {
 				alert("Please fill in all fields.");
 				return;
 			}
 
+			// Show loading indicator
+			submitButton.disabled = true;
+			submitButton.innerHTML = "Sending...";
+			
+			// Add loading indicator after the form
+			document.querySelector('.home-contact').appendChild(loadingIndicator);
 
-			var emailBody = "Name: " + name + " " + "\n";
-			emailBody += "Email: " + email + "\n\n";			emailBody += "Phone: " + phone + "\n\n";
-
+			var emailBody = "Name: " + name + " " + "\n\n";
+			emailBody += "Email: " + email + "\n\n";
+			emailBody += "Phone: " + phone + "\n\n";
 			emailBody += "Message:\n" + message;
+			
 			// Construct the request payload
 			var payload = {
-				to: "Veggelatharun195@gmail.com",
+				to: "veggelatharun195@gmail.com",
 				subject: "You receive a lead",
 				body: emailBody,
-        name:"Itechgen"
+				name: "Itechgen"
 			};
 
 			// Use Fetch API to send the request to your API
@@ -1377,26 +1405,137 @@
 				},
 				body: JSON.stringify(payload)
 			})
-				.then(response => {
-					console.log("You receive a lead");
+			.then(response => {
+				console.log("You receive a lead");
+				return response.json();
+			})
+			.then(data => {
+				// Hide loading indicator
+				loadingIndicator.style.display = "none";
+				
+				// Reset input values to empty
+				document.getElementById("name").value = "";
+				document.getElementById("email").value = "";
+				document.getElementById("message").value = "";
+				document.getElementById("phone").value = "";
+				
+				// Show success message
+				document.querySelector('.home-contact').appendChild(successMessage);
+				successMessage.style.display = "block";
+				
+				// Reset button
+				submitButton.disabled = false;
+				submitButton.innerHTML = "Submit";
+				
+				// Hide success message after 5 seconds
+				setTimeout(function() {
+					successMessage.style.display = "none";
+				}, 5000);
+			})
+			.catch(error => {
+				console.error('Error sending email:', error);
+				
+				// Hide loading indicator
+				loadingIndicator.style.display = "none";
+				
+				// Reset button
+				submitButton.disabled = false;
+				submitButton.innerHTML = "Submit";
+				
+				// Show error message
+				alert("There was an error sending your message. Please try again later.");
+			});
+		}
+		
+		function sendModalEmail() {
+			event.preventDefault(); // Prevent form from submitting normally
+			
+			// Get input values
+			var name = document.getElementById("modal-name").value;
+			var email = document.getElementById("modal-email").value;
+			var message = document.getElementById("modal-message").value;
+			var phone = document.getElementById("modal-phone").value;
+			var submitButton = document.querySelector('#modalForm button[type="submit"]');
+			var statusContainer = document.getElementById("modal-form-status");
+			
+			// Check if any required field is empty
+			if (!name || !email || !message || !phone) {
+				alert("Please fill in all fields.");
+				return;
+			}
 
-// Reset input values to empty
-document.getElementById("name").value = "";
-document.getElementById("email").value = "";
-document.getElementById("message").value = "";
-					response.json();
-				})
-				.then(data => {
-					
-// Reset input values to empty
-document.getElementById("name").value = "";
-document.getElementById("email").value = "";
-document.getElementById("message").value = "";
-				})
-				.catch(error => {
-					console.error('Error sending email:', error);
-				});
-			// Construct the email body
+			// Show loading indicator
+			submitButton.disabled = true;
+			submitButton.innerHTML = "Sending...";
+			
+			// Create and show loading indicator
+			statusContainer.innerHTML = '<div class="d-flex align-items-center mt-2 mb-2"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div><span class="ms-2">Sending...</span></div>';
+
+			var emailBody = "Name: " + name + " " + "\n\n";
+			emailBody += "Email: " + email + "\n\n";
+			emailBody += "Phone: " + phone + "\n\n";
+			emailBody += "Message:\n" + message;
+			
+			// Construct the request payload
+			var payload = {
+				to: "veggelatharun195@gmail.com",
+				subject: "You receive a lead (Modal Form)",
+				body: emailBody,
+				name: "Itechgen"
+			};
+
+			// Use Fetch API to send the request to your API
+			fetch('https://send-mail-redirect-boostmysites.vercel.app/send-email', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(payload)
+			})
+			.then(response => {
+				console.log("You receive a lead from modal form");
+				return response.json();
+			})
+			.then(data => {
+				// Reset input values to empty
+				document.getElementById("modal-name").value = "";
+				document.getElementById("modal-email").value = "";
+				document.getElementById("modal-message").value = "";
+				document.getElementById("modal-phone").value = "";
+				
+				// Show success message
+				statusContainer.innerHTML = '<div class="alert alert-success mt-2">Your message has been sent successfully! We\'ll get back to you soon.</div>';
+				
+				// Reset button
+				submitButton.disabled = false;
+				submitButton.innerHTML = "Submit";
+				
+				// Hide success message after 5 seconds and close modal
+				setTimeout(function() {
+					statusContainer.innerHTML = "";
+					// Close the modal
+					var modalElement = document.getElementById('modalId');
+					var modalInstance = bootstrap.Modal.getInstance(modalElement);
+					if (modalInstance) {
+						modalInstance.hide();
+					}
+				}, 3000);
+			})
+			.catch(error => {
+				console.error('Error sending email:', error);
+				
+				// Show error message
+				statusContainer.innerHTML = '<div class="alert alert-danger mt-2">There was an error sending your message. Please try again later.</div>';
+				
+				// Reset button
+				submitButton.disabled = false;
+				submitButton.innerHTML = "Submit";
+				
+				// Hide error message after 5 seconds
+				setTimeout(function() {
+					statusContainer.innerHTML = "";
+				}, 5000);
+			});
 		}
 	</script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
